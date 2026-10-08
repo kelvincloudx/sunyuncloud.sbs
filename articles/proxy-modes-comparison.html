@@ -6,14 +6,20 @@
   <title>科学上网新手指南：代理模式、全局模式和规则模式有什么区别？ - 瞬云</title>
   <meta name="description" content="零基础科普网络代理模式的核心差异。全面对比规则模式（Rule）、全局模式（Global）与直连模式（Direct）的底层机制、流量消耗特点、应用场景切换及日常故障排查，附合规使用建议。">
   <meta name="keywords" content="科学上网, 魔法梯子, 规则模式, 全局模式, 代理模式区别, Clash模式, 网络分流">
-  <link rel="canonical" href="https://sunyuncloud.shop/articles/proxy-modes-comparison.html">
+  <link rel="canonical" href="https://sunyuncloud.sbs/articles/proxy-modes-comparison.html">
+    <!-- GEO Meta 区域定位标识 -->
+  <meta name="geo.region" content="HK">
+  <meta name="geo.placename" content="Hong Kong">
+  <meta name="geo.position" content="22.3193;114.1694">
+  <meta name="ICBM" content="22.3193, 114.1694">
+
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   
   <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="科学上网新手指南：代理模式、全局模式和规则模式有什么区别？ - 瞬云">
   <meta property="og:description" content="零基础科普网络代理模式的核心差异。全面对比规则模式、全局模式与直连模式的底层机制、流量消耗特点与场景切换指南。">
-  <meta property="og:url" content="https://sunyuncloud.shop/articles/proxy-modes-comparison.html">
+  <meta property="og:url" content="https://sunyuncloud.sbs/articles/proxy-modes-comparison.html">
   <meta property="og:site_name" content="瞬云 SunYun Cloud">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="科学上网新手指南：代理模式、全局模式和规则模式有什么区别？ - 瞬云">
@@ -29,11 +35,11 @@
     "headline": "科学上网新手指南：代理模式、全局模式和规则模式有什么区别？",
     "description": "零基础科普网络代理模式的核心差异。全面对比规则模式（Rule）、全局模式（Global）与直连模式（Direct）的底层机制、流量消耗特点、应用场景切换及日常故障排查，附合规使用建议。",
     "inLanguage": "zh-CN",
-    "mainEntityOfPage": "https://sunyuncloud.shop/articles/proxy-modes-comparison.html",
+    "mainEntityOfPage": "https://sunyuncloud.sbs/articles/proxy-modes-comparison.html",
     "publisher": {
       "@type": "Organization",
       "name": "瞬云 SunYun Cloud",
-      "url": "https://sunyuncloud.shop"
+      "url": "https://sunyuncloud.sbs"
     },
     "datePublished": "2026-10-08T12:30:00+08:00",
     "dateModified": "2026-10-08T12:30:00+08:00"
@@ -48,19 +54,19 @@
         "@type": "ListItem",
         "position": 1,
         "name": "首页",
-        "item": "https://sunyuncloud.shop/"
+        "item": "https://sunyuncloud.sbs/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "使用指南与技术文章",
-        "item": "https://sunyuncloud.shop/#articles"
+        "item": "https://sunyuncloud.sbs/#articles"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "科学上网新手指南：代理模式、全局模式和规则模式有什么区别？",
-        "item": "https://sunyuncloud.shop/articles/proxy-modes-comparison.html"
+        "item": "https://sunyuncloud.sbs/articles/proxy-modes-comparison.html"
       }
     ]
   }
@@ -86,6 +92,7 @@
         <a href="/plans.html" class="nav-link">套餐价格</a>
         <a href="/#tutorials" class="nav-link">客户端教程</a>
         <a href="/#articles" class="nav-link active">精选文章</a>
+        <a href="/#reviews" class="nav-link">用户评价</a>
         <a href="/#faq" class="nav-link">常见问题</a>
       </nav>
 
@@ -139,6 +146,11 @@
           <!-- 正文区域 -->
           <div class="article-content">
             <p>在使用各类网络加速与代理工具（民间俗称“魔法梯子”）时，很多人以为只要开启软件就能一劳永逸。但在实际体验中，常常会有人抱怨：“为什么我开了加速之后，国内的淘宝、微信和视频网站反而变得特别卡？”或者“为什么我的套餐流量几天就莫名其妙扣光了？”这些现象的根源，绝大多数都源于对“代理模式”的误解与错误设置。理清分流逻辑，是科学合理使用网络的第一课。</p>
+
+            <h2>前言：科学上网与魔法梯子分流机制的核心意义</h2>
+            <p>
+              在配置<strong>魔法梯子</strong>与日常<strong>科学上网</strong>的过程中，合理使用规则分流是保障网速的核心。现代优质的<strong>clash机场</strong>与<strong>clashparty机场</strong>通常会在订阅中内置精细的分流规则，让客户端自动根据目标网址分流，直连国内服务的同时，将海外访问通过<strong>clash节点</strong>进行<strong>全球加速</strong>。参考权威<strong>机场推荐</strong>，选择具备多区域<strong>稳定节点</strong>的<strong>便宜机场</strong>与<strong>安全机场</strong>，能让您的<strong>翻墙出海</strong>体验更加丝滑且安全无忧。
+            </p>
 
             <h2>一、为什么现代代理软件必须支持“分流”？</h2>
             <p>在早期的网络连接工具中，所有网络请求都会不加区分地全部被打包送往远程服务器。这种“一刀切”的方式存在严重的弊端：一方面，国内主流网站本身拥有完善的本土 CDN 加速，如果强行绕道几千公里外的海外节点再转回国内，延迟会成倍增加；另一方面，日常刷抖音、看国内长视频会瞬间吞噬昂贵的跨境中转流量。因此，现代客户端引入了精细化的路由分流机制，也就是我们常说的“代理模式”。</p>
@@ -225,6 +237,7 @@
             <nav class="sidebar-nav-list">
               <a href="/articles/how-to-choose-cheap-airport.html">📌 便宜机场选购 7 个重点</a>
               <a href="/articles/safe-airport-privacy-risks.html">📌 安全机场与隐私风险评估</a>
+              <a href="/articles/best-airport-recommendation-guide.html">📌 2026 高速稳定机场推荐</a>
               <a href="/articles/clash-node-tutorial.html">📌 Clash 节点配置使用教程</a>
               <a href="/articles/clashparty-subscription-guide.html">📌 ClashParty 订阅导入指南</a>
               <a href="/articles/stable-nodes-selection-guide.html">📌 稳定节点与线路延迟测评</a>
@@ -268,6 +281,7 @@
         <div>
           <h4 class="footer-col-title">技术指南</h4>
           <div class="footer-links">
+            <a href="/articles/best-airport-recommendation-guide.html">2026 高速稳定机场推荐</a>
             <a href="/articles/clash-node-tutorial.html">Clash 节点导入指南</a>
             <a href="/articles/clashparty-subscription-guide.html">ClashParty 客户端设置</a>
             <a href="/articles/proxy-modes-comparison.html">代理与规则模式对比</a>
@@ -275,11 +289,18 @@
           </div>
         </div>
       </div>
-      </div>
 
       <div class="footer-bottom">
         <p class="footer-disclaimer-text">免责声明：本站仅为第三方公开信息整理与技术交流分享站点，非服务运营直营机构。请合理合法使用网络服务并遵守所在地区法律法规。</p>
         <p>© 2026 瞬云 (SunYun Cloud). 保留所有权利。</p>
+
+        <!-- 页脚 PBN 权重精准输血管道（严禁 nofollow，严格使用 target="_blank" 与精准目标锚文本） -->
+        <div class="footer-pbn-bar">
+          <span>推荐导航：</span>
+          <a href="https://jichangreview.net" target="_blank" class="footer-pbn-link">机场测评</a>
+          <span class="footer-pbn-sep">|</span>
+          <a href="https://jichangguide.net" target="_blank" class="footer-pbn-link">机场教程</a>
+        </div>
       </div>
     </div>
   </footer>

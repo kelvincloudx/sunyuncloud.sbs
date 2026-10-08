@@ -1582,3 +1582,270 @@ ul, ol {
     margin-top: 8px;
   }
 }
+
+/* ===================================================================
+   用户真实评价专区样式 (User Reviews & Testimonials)
+   =================================================================== */
+.reviews-section {
+  padding: 80px 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.reviews-summary-bar {
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius-md);
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.summary-score-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.summary-score-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1;
+}
+
+.summary-score-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary-stars-row {
+  display: flex;
+  gap: 2px;
+  color: #f59e0b;
+  font-size: 1.1rem;
+}
+
+.summary-score-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.summary-features-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.summary-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.summary-feature-item svg {
+  width: 18px;
+  height: 18px;
+  color: #10b981;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.review-author-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.avatar-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.avatar-purple { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+.avatar-emerald { background: linear-gradient(135deg, #10b981, #047857); }
+.avatar-amber { background: linear-gradient(135deg, #f59e0b, #b45309); }
+.avatar-rose { background: linear-gradient(135deg, #f43f5e, #be123c); }
+.avatar-indigo { background: linear-gradient(135deg, #6366f1, #4338ca); }
+
+.review-author-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.review-author-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.72rem;
+  background: #ecfdf5;
+  color: #059669;
+  padding: 1px 6px;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid #a7f3d0;
+}
+
+.review-author-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.review-plan-badge {
+  font-size: 0.75rem;
+  color: #4f46e5;
+  background: #eef2ff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+  color: #f59e0b;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 0.92rem;
+  color: #334155;
+  line-height: 1.65;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.review-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.review-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+/* 页脚 PBN 友好外链与输血管道样式 */
+.footer-pbn-bar {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer-pbn-bar span {
+  color: #475569;
+}
+
+.footer-pbn-link {
+  color: #94a3b8 !important;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+}
+
+.footer-pbn-link:hover {
+  color: #cbd5e1 !important;
+  text-decoration: underline;
+}
+
+.footer-pbn-sep {
+  color: #334155;
+  user-select: none;
+}
+
+@media (max-width: 992px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+  .reviews-summary-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

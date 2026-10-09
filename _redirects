@@ -1,0 +1,18 @@
+# Cloudflare Pages 301 Redirect Rules
+/articles/how-to-choose-cheap-airport.html /articles/plan-selection-guide.html 301
+/articles/how-to-choose-cheap-airport /articles/plan-selection-guide.html 301
+/articles/best-airport-recommendation-guide.html /articles/plan-selection-guide.html 301
+/articles/best-airport-recommendation-guide /articles/plan-selection-guide.html 301
+/articles/clash-node-tutorial.html /articles/windows-client-tutorial.html 301
+/articles/clash-node-tutorial /articles/windows-client-tutorial.html 301
+/articles/clashparty-subscription-guide.html /articles/getting-started-guide.html 301
+/articles/clashparty-subscription-guide /articles/getting-started-guide.html 301
+/articles/cross-border-network-faq.html /articles/frequently-asked-questions.html 301
+/articles/cross-border-network-faq /articles/frequently-asked-questions.html 301
+/articles/proxy-modes-comparison.html /articles/getting-started-guide.html 301
+/articles/proxy-modes-comparison /articles/getting-started-guide.html 301
+/articles/safe-airport-privacy-risks.html /articles/subscription-link-management.html 301
+/articles/safe-airport-privacy-risks /articles/subscription-link-management.html 301
+/articles/stable-nodes-selection-guide.html /articles/troubleshooting-connection-failures.html 301
+/articles/stable-nodes-selection-guide /articles/troubleshooting-connection-failures.html 301
+/plans /plans.html 301

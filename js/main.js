@@ -1,6 +1,6 @@
 /**
  * 瞬云 (SunYun Cloud) 交互脚本
- * 功能: 移动端导航展开折叠、平滑滚动、无外部依赖
+ * 功能: 移动端导航抽屉切换、平滑滚动、返回顶部、纯原生高可用
  */
 document.addEventListener('DOMContentLoaded', function () {
   // 移动端菜单切换
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       var targetEl = document.querySelector(targetId);
       if (targetEl) {
         e.preventDefault();
-        var headerOffset = 80;
+        var headerOffset = 84;
         var elementPosition = targetEl.getBoundingClientRect().top;
         var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -47,6 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
           behavior: 'smooth'
         });
       }
+    });
+  });
+
+  // 返回顶部按钮
+  var backToTopBtns = document.querySelectorAll('.back-to-top-btn');
+  backToTopBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   });
 });

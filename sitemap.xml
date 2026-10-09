@@ -13,51 +13,63 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/best-airport-recommendation-guide.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/getting-started-guide.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/how-to-choose-cheap-airport.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/plan-selection-guide.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/safe-airport-privacy-risks.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/windows-client-tutorial.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/clash-node-tutorial.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/android-client-tutorial.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/clashparty-subscription-guide.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/iphone-client-precautions.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/stable-nodes-selection-guide.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/subscription-link-management.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/proxy-modes-comparison.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/troubleshooting-connection-failures.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sunyuncloud.sbs/articles/cross-border-network-faq.html</loc>
+    <loc>https://sunyuncloud.sbs/articles/traffic-consumption-diagnosis.html</loc>
     <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sunyuncloud.sbs/articles/multi-device-configuration-guide.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sunyuncloud.sbs/articles/frequently-asked-questions.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>

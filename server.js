@@ -18,9 +18,48 @@ const MIME_TYPES = {
   '.txt': 'text/plain; charset=utf-8'
 };
 
+const REDIRECTS = {
+  '/articles/how-to-choose-cheap-airport.html': '/articles/plan-selection-guide.html',
+  '/articles/how-to-choose-cheap-airport': '/articles/plan-selection-guide.html',
+  '/articles/how-to-choose-cheap-airport/': '/articles/plan-selection-guide.html',
+  '/articles/best-airport-recommendation-guide.html': '/articles/plan-selection-guide.html',
+  '/articles/best-airport-recommendation-guide': '/articles/plan-selection-guide.html',
+  '/articles/best-airport-recommendation-guide/': '/articles/plan-selection-guide.html',
+  '/articles/clash-node-tutorial.html': '/articles/windows-client-tutorial.html',
+  '/articles/clash-node-tutorial': '/articles/windows-client-tutorial.html',
+  '/articles/clash-node-tutorial/': '/articles/windows-client-tutorial.html',
+  '/articles/clashparty-subscription-guide.html': '/articles/getting-started-guide.html',
+  '/articles/clashparty-subscription-guide': '/articles/getting-started-guide.html',
+  '/articles/clashparty-subscription-guide/': '/articles/getting-started-guide.html',
+  '/articles/cross-border-network-faq.html': '/articles/frequently-asked-questions.html',
+  '/articles/cross-border-network-faq': '/articles/frequently-asked-questions.html',
+  '/articles/cross-border-network-faq/': '/articles/frequently-asked-questions.html',
+  '/articles/proxy-modes-comparison.html': '/articles/getting-started-guide.html',
+  '/articles/proxy-modes-comparison': '/articles/getting-started-guide.html',
+  '/articles/proxy-modes-comparison/': '/articles/getting-started-guide.html',
+  '/articles/safe-airport-privacy-risks.html': '/articles/subscription-link-management.html',
+  '/articles/safe-airport-privacy-risks': '/articles/subscription-link-management.html',
+  '/articles/safe-airport-privacy-risks/': '/articles/subscription-link-management.html',
+  '/articles/stable-nodes-selection-guide.html': '/articles/troubleshooting-connection-failures.html',
+  '/articles/stable-nodes-selection-guide': '/articles/troubleshooting-connection-failures.html',
+  '/articles/stable-nodes-selection-guide/': '/articles/troubleshooting-connection-failures.html',
+  '/plans': '/plans.html',
+  '/plans/': '/plans.html'
+};
+
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
   if (reqPath === '/') reqPath = '/index.html';
+
+  // Check 301 Permanent Redirects for legacy URLs
+  if (REDIRECTS[reqPath]) {
+    res.writeHead(301, {
+      'Location': REDIRECTS[reqPath],
+      'Content-Type': 'text/html; charset=utf-8'
+    });
+    res.end(`<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=${REDIRECTS[reqPath]}"></head><body>Moved Permanently to <a href="${REDIRECTS[reqPath]}">${REDIRECTS[reqPath]}</a></body></html>`);
+    return;
+  }
 
   let filePath = path.join(ROOT, reqPath);
 

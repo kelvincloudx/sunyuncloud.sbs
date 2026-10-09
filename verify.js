@@ -243,44 +243,39 @@ pagesToCheck.forEach(file => {
       affRelValid = false;
       fail(`推广链接属性 [${file}]`, '缺少 rel="sponsored nofollow noopener" 属性');
     }
-    if (!html.includes('推广合作') && !html.includes('推广标识')) {
-      disclosureValid = false;
-      fail(`推广披露检查 [${file}]`, '缺少透明的推广合作披露说明');
-    }
   }
 });
 
 if (affUrlValid) pass('推广链接一致性', `所有页面注册/订购按钮均正确配置推广链接 ${AFF_URL}`);
 if (affRelValid) pass('推广链接属性合规', '所有推广外链均配置 rel="sponsored nofollow noopener"');
-if (disclosureValid) pass('推广合作透明披露', '全站页面均包含清晰明确的推广合作与客观性声明');
 
-// 9. 检查页脚友情链接 PBN 输血管道 (纯粹 dofollow, 包含目标锚文本)
+// 9. 检查图一、图二、图三相关元素已彻底删除 (根据用户最新指令)
+let unwantedFound = false;
+const unwantedSnippets = [
+  'pricing-clarification-box',
+  'footer-disclosure-block',
+  'footer-friendly-links',
+  '数据核实与呈现说明',
+  '推广合作与客观性声明',
+  'jichangreview.net',
+  'jichangguide.net'
+];
+
 pagesToCheck.forEach(file => {
   if (fs.existsSync(file)) {
     const html = fs.readFileSync(file, 'utf8');
-    const hasReview = html.includes('https://jichangreview.net') && html.includes('机场测评');
-    const hasGuide = html.includes('https://jichangguide.net') && html.includes('机场教程');
-    const hasTargetBlank = html.includes('target="_blank"');
-    
-    // 检查是否有 nofollow 阻断
-    const footerIdx = html.indexOf('<footer');
-    if (footerIdx !== -1) {
-      const footerHtml = html.substring(footerIdx);
-      const reviewMatches = footerHtml.match(/<a[^>]+jichangreview\.net[^>]*>/);
-      const guideMatches = footerHtml.match(/<a[^>]+jichangguide\.net[^>]*>/);
-
-      const reviewNoFollow = reviewMatches && reviewMatches[0].includes('nofollow');
-      const guideNoFollow = guideMatches && guideMatches[0].includes('nofollow');
-
-      if (hasReview && hasGuide && hasTargetBlank && !reviewNoFollow && !guideNoFollow) {
-        // pass
-      } else {
-        fail(`页脚友情链接 [${file}]`, '友链设置不合规 (需包含目标锚文本、target="_blank" 且严禁 nofollow)');
+    unwantedSnippets.forEach(snippet => {
+      if (html.includes(snippet)) {
+        unwantedFound = true;
+        fail(`用户要求删除内容排查 [${file}]`, `仍然存在待删除内容: ${snippet}`);
       }
-    }
+    });
   }
 });
-pass('页脚 PBN 友链合规性', '全站页脚友情链接均已保持纯粹 dofollow、target="_blank"，锚文本准确绑定');
+
+if (!unwantedFound) {
+  pass('图一图二图三彻底删除验证', '全站所有页面已彻底清除“数据核实说明”(图一)、“推广合作声明”(图二)及“友情链接”(图三)');
+}
 
 // 10. 竞品与违规关键词排查 (本站仅介绍瞬云，不得添加其他机场、竞品或排行榜)
 const forbiddenCompetitors = ['TagVPN', '喵帕斯', '泡芙云', '飞鸟云', '极客云', '速鹰', '速鹰666', '魔戒'];
